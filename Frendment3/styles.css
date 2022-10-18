@@ -1,10 +1,45 @@
 :root {
   --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
   --VeryDarkBlue: hsl(212, 21%, 14%);
   --DarkGrayishBlue: hsl(228, 12%, 48%);
   --White: hsl(0, 0%, 100%);
 }
 body {
+  background-color: var(--Cream);
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  font-family: "Fraunces", sans-serif;
+  color: var(--VeryDarkBlue);
+  font-size: 2.25rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+}
+.category {
+  font-style: bold;
+  text-transform: uppercase;
+}
+.textcontent {
+  margin: 2rem;
 }
 .attribution {
   font-size: 11px;
