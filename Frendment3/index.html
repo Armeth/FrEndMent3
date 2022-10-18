@@ -1,57 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
+body {
+  background-color: var(--Cream);
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
 
-    <title>Frontend Mentor | Product preview card component</title>
-  </head>
-  <body>
-    <main>
-      <section>
-        <img
-          srcset="
-            images/image-product-desktop.jpg 600w,
-            images/image-product-mobile.jpg  686w
-          "
-          alt="perfume bottle with foilage"
-          sizes="(max-width: 600px) 686px, 300px"
-        />
-        <div class="textcontent">
-          <span class="category">Perfume</span>
-          <h1>Gabrielle Essence Eau De Parfum</h1>
-          <p>
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </p>
-          <div class="prices">
-            <span class="sale">$149.99</span>
-            <span class="regular">$169.99</span>
-          </div>
-          <button class="cartization">Add to Cart</button>
-        </div>
-      </section>
-    </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
-</html>
+img {
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+h1 {
+  font-family: "Fraunces", sans-serif;
+  color: var(--VeryDarkBlue);
+  font-size: 2.25rem;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section {
+  box-sizing: border-box;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.category {
+  font-weight: 700;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--DarkGrayishBlue);
+}
+
+.textcontent {
+  margin: 2rem;
+  color: var(--DarkGrayishBlue);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.sale {
+  color: var(--DarkCyan);
+  font-size: xx-large;
+  font-family: "Fraunces", sans-serif;
+  margin-right: 1.25rem;
+}
+
+.regular {
+  text-decoration: line-through;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cartify {
+  background-color: var(--DarkCyan);
+  color: var(--White);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  border-style: none;
+  height: 50px;
+  width: 100%;
+}
+
+.carticon {
+  margin-right: 10px;
+}
+
+.cartify:hover {
+  background-color: var(--VeryDarkBlue);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+    width: 375px;
+  }
+
+  img {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
