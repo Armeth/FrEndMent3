@@ -1,0 +1,125 @@
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--Cream);
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+img {
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+h1 {
+  font-family: "Fraunces", sans-serif;
+  color: var(--VeryDarkBlue);
+  font-size: 2.25rem;
+  line-height: 1em;
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section {
+  box-sizing: border-box;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.category {
+  font-weight: 700;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--DarkGrayishBlue);
+}
+
+.textcontent {
+  margin: 2rem;
+  color: var(--DarkGrayishBlue);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.sale {
+  color: var(--DarkCyan);
+  font-size: xx-large;
+  font-family: "Fraunces", sans-serif;
+  margin-right: 1.25rem;
+}
+
+.regular {
+  text-decoration: line-through;
+}
+
+.buttondiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cartify {
+  background-color: var(--DarkCyan);
+  color: var(--White);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  border-style: none;
+  height: 50px;
+  width: 100%;
+}
+
+.carticon {
+  margin-right: 10px;
+}
+
+.cartify:hover {
+  background-color: var(--VeryDarkBlue);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+    width: 375px;
+  }
+
+  img {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
